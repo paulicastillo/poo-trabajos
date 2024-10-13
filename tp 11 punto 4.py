@@ -1,0 +1,15 @@
+import tkinter as tk
+def login():
+    print("Intento de ingreso con usuario:", user_entry.get(), "y contraseña:", pass_entry.get())
+root = tk.Tk()
+root.title("Ingreso de Usuario")
+root.geometry("300x200")
+tk.Label(root, text="Usuario").pack(pady=5)
+user_entry = tk.Entry(root)
+user_entry.pack(pady=5)
+tk.Label(root, text="Contraseña").pack(pady=5)
+pass_entry = tk.Entry(root, show="*")
+pass_entry.pack(pady=5)
+tk.Button(root, text="Ingresar", command=login).pack(pady=10)
+tk.Button(root, text="Olvidé mi usuario y/o contraseña").pack(pady=5)
+root.mainloop()
